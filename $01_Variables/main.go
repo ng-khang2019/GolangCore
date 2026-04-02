@@ -34,7 +34,7 @@ func main() {
 	fmt.Println(d)
 	fmt.Println("Pi value is ", e)
 
-	// := operator is used for shorthand declaration. It is commonly used inside a
+	// := operator is used for shorthand declaration. It is commonly used inside a function
 	fruit := "Banana"
 	prime1, prime2, prime3 := 2, 3, 5
 	fmt.Println(fruit)
