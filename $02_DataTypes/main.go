@@ -1,4 +1,4 @@
-package _02_DataTypes
+package main
 
 import (
 	"fmt"
