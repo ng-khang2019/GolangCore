@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math"
 )
 
 // Declare constants without type (Global Scope)
@@ -23,18 +24,22 @@ const (
 )
 
 func main() {
+	// Declare a constant with a type inside a function (Local Scope)
+	const SecondPerMinute int = 60
+	const WelcomeMessage string = "Welcome to Golang"
+
 	// Declare constants without a type inside a function (Local Scope)
 	const LocalLimit = 1000
-	const WelcomeMessage = "Welcome to Golang"
-	// Declare a constant with type
-	const SecondPerMinute int = 60
+	const n = 500000
 
 	fmt.Println("Message:", WelcomeMessage)
 	fmt.Println("App Name:", ApplicationName)
 	fmt.Println("Pi Value:", Pi)
 	fmt.Println("Category Art ID:", CategoryArt)
+	fmt.Printf("There are %v seconds in a minute\n", SecondPerMinute)
 	// A constant can hold no type until it is used or through a conversion
 	fmt.Println("Local Limit:", int64(LocalLimit))
+	fmt.Printf("Variable n holds a value of %f but its type is %T\n", math.Sin(n), n)
 
 	// Create enums with custom Type, const and iota
 	type Day int
