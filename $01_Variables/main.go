@@ -44,6 +44,11 @@ func main() {
 	// Declare, initialize and pass values to a function
 	x, y := swap(10, 5)
 	fmt.Println(x, y)
+
+	var1, var2 := 1, 2
+	// var1, var2 := 7, 8 - Reassign with this will cause error
+	var1, var2, var3 := 7, 8, 9 // But this works
+	fmt.Printf("var1: %d\nvar2: %d\nvar3: %d\n ", var1, var2, var3)
 }
 
 func swap(x, y int) (int, int) {
