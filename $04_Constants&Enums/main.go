@@ -24,6 +24,8 @@ const (
 )
 
 func main() {
+	// IMPORTANT: Constants cannot be declared using the := syntax
+
 	// Declare a constant with a type inside a function (Local Scope)
 	const SecondPerMinute int = 60
 	const WelcomeMessage string = "Welcome to Golang"
