@@ -39,7 +39,7 @@ func main() {
 	fmt.Printf("There are %v seconds in a minute\n", SecondPerMinute)
 	// A constant can hold no type until it is used or through a conversion
 	fmt.Println("Local Limit:", int64(LocalLimit))
-	fmt.Printf("Variable n holds a value of %f but its type is %T\n", math.Sin(n), n)
+	fmt.Printf("Variable n holds a value of %f after math.Sin() function but its type is %T\n", math.Sin(n), n)
 
 	// Create enums with custom Type, const and iota
 	type Day int
