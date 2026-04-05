@@ -41,6 +41,13 @@ func main() {
 	fmt.Println(prime1, prime2, prime3)
 	fmt.Println(printApple())
 
+	// Declare, initialize and pass values to a function
+	x, y := swap(10, 5)
+	fmt.Println(x, y)
+}
+
+func swap(x, y int) (int, int) {
+	return y, x
 }
 
 func printApple() string {
