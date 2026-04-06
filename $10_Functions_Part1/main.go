@@ -9,9 +9,24 @@ func main() {
 	fmt.Println()
 
 	a, b := swap("Hello", "World") // Same as var a, b string = "Hello", "World"
-	fmt.Println(swap(a, b))
+	fmt.Println(a, b)
 
 	fmt.Println(split(add(5, 8, 4)))
+
+	// A defer statement defers the execution of a
+	// function until the surrounding function returns.
+	defer fmt.Print("Done!\n")
+
+	/*
+		Deferred function calls are pushed onto a stack. When a
+		function returns, its deferred calls are executed in
+		last-in-first-out order.
+	*/
+	fmt.Println("Counting")
+	for i := 0; i < 10; i++ {
+		defer fmt.Println(i)
+	}
+
 }
 
 /*
