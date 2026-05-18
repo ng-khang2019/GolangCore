@@ -30,7 +30,26 @@ func main() {
 	fmt.Println("\nArrayA: ", arrA)
 	// Specify the elements
 	arrB := [...]int{1: 10, 2: 20, 5: 50, 6: 60, 70, 80}
-	fmt.Println("\nArrayB: ", arrB)
+	fmt.Println("ArrayB: ", arrB)
+
+	// Looping through an array using range
+	// ignore index, access value only
+	fmt.Println("\nLooping through arrayB using range:")
+	fmt.Println("Ignoring indexes, accessing values only:")
+	for _, value := range arrB {
+		fmt.Print(value, " ")
+	}
+	// access index only
+	fmt.Println("\nAccessing indexes only:")
+	for index := range arrB {
+		fmt.Print(index, " ")
+	}
+	// access both index and value
+	fmt.Println("\nAccessing both index and value:")
+	for index, value := range arrB {
+		fmt.Print(index, ":", value, "|")
+	}
+	fmt.Println()
 
 	// Declare a 2D array
 	var arr3 [2][3]int
