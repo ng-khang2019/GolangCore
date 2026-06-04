@@ -27,6 +27,10 @@ func main() {
 		defer fmt.Println(i)
 	}
 
+	array := []int{1, 2, 3, 4, 5, 6, 7, 8}
+	fmt.Println("Sum of 1,2,3", sumArr(1, 2, 3))
+	fmt.Print("Sum of elements:", sumArr(array...))
+
 }
 
 /*
@@ -52,4 +56,13 @@ func split(sum int) (x, y int) {
 	x = sum * 4 / 9
 	y = sum - x
 	return // This will return the named return values which are x and y
+}
+
+// Variadic function
+func sumArr(numbers ...int) int {
+	sum := 0
+	for _, number := range numbers {
+		sum += number
+	}
+	return sum
 }
