@@ -29,8 +29,21 @@ func main() {
 
 	array := []int{1, 2, 3, 4, 5, 6, 7, 8}
 	fmt.Println("Sum of 1,2,3", sumArr(1, 2, 3))
-	fmt.Print("Sum of elements:", sumArr(array...))
+	fmt.Println("Sum of elements:", sumArr(array...))
 
+	// Closure function call
+	count := counter()
+
+	fmt.Println("Counter:")
+	fmt.Println(count())
+	fmt.Println(count())
+	fmt.Println(count())
+
+	// More complex closure function call
+	posSum, negSum := sum(), sum()
+	for i := 0; i < 10; i++ {
+		fmt.Println(posSum(i*2), negSum(i*(-1)))
+	}
 }
 
 /*
@@ -65,4 +78,24 @@ func sumArr(numbers ...int) int {
 		sum += number
 	}
 	return sum
+}
+
+// This function returns a closure.
+// The returned anonymous function retains direct reference to the local variables
+// of its parent scope (state preservation). Any changes made to these variables
+// will persist across multiple function calls.
+func counter() func() int {
+	i := 0
+	return func() int {
+		i++
+		return i
+	}
+}
+
+func sum() func(int) int {
+	sum := 0
+	return func(x int) int {
+		sum += x
+		return sum
+	}
 }
