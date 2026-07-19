@@ -17,7 +17,7 @@ func quadraticEquation(a, b, c int) {
 	if a == 0 {
 		linearEquationEx6(b, c)
 	} else {
-		var discriminant float64 = float64(b*b - 4*a*c)
+		var discriminant = float64(b*b - 4*a*c)
 		if discriminant < 0 {
 			fmt.Println("Quadratic equation has no real solutions")
 		} else if discriminant == 0 {
